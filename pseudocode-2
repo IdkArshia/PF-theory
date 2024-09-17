@@ -1,0 +1,16 @@
+INPUT num
+IF num>0
+THEN 
+  IF num%2==0 
+  THEN 
+  OUTPUT "number is even"
+  ELSE
+  OUTPUT "number is odd"
+  END IF
+ELSE
+OUTPUT "Invalid input"
+END IF
+
+
+My Understanding:
+validate the number first. If it is a positive integer then apply mod 2. if result is 0 then it is even else it is odd
