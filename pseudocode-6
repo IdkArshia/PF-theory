@@ -1,0 +1,49 @@
+INPUT Age 
+INPUT Height
+tired=False
+WHILE tired==False
+INPUT ride
+IF ride==dragon rollercoaster
+THEN 
+  IF height>=48 AND Age>=10
+  THEN 
+    OUTPUT "you meet criteria for dragon rollercoaster"
+    INPUT tired
+  ELSE 
+    OUTPUT "sorry you do not meet criteria for dragon rollercoaster"
+    INPUT tired
+  END IF
+ELSE IF ride==SkySwing
+  THEN 
+    IF height>=54
+  THEN 
+    OUTPUT "you meet criteria for SkySwing"
+    INPUT tired
+  ELSE 
+    OUTPUT "sorry you do not meet criteria for SkySwing"
+    INPUT tired
+  END IF
+END IF
+ELSE IF Age>=5
+   THEN 
+     OUTPUT "you meet criteria for The Carousel"
+     INPUT tired
+  ELSE 
+    OUTPUT "sorry you do not meet criteria for The Carousel"
+    INPUT tired
+END IF
+END IF
+END WHILE
+OUTPUT "thankyou"
+
+
+
+My Understanding:
+check requirements according to the choice of ride and output an appropriate result.
+ask if they are tired after each output.repeat if they are not tired
+
+
+
+
+
+     
