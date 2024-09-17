@@ -1,0 +1,6 @@
+INPUT speed_in_kps
+- speed_in_mph= speed_in_kps*2237
+- OUTPUT speed_in_mph
+
+My Understanding:
+according to google the formula for converting speed in kps into mph is multiplying speed in kph with 2237 
