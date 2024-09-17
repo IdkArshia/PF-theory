@@ -1,0 +1,40 @@
+INPUT crop_type
+INPUT rainfall_status
+INPUT soil_moisture
+IF crop_type==wheat
+THEN 
+  IF soil_moisture<30 AND rainfall_status== False
+  THEN 
+    OUTPUT Innitiate Irrigation
+  ELSE 
+    OUTPUT No Irrigation
+  END IF
+ELSE IF crop_type==corn
+  THEN 
+    IF soil_moisture<40
+    THEN 
+      OUTPUT Innitiate Irrigation
+    ELSE 
+      OUTPUT No Irrigation
+    END IF
+END IF
+ELSE 
+  IF soil_moisture<25 AND rainfall_status== False
+  THEN 
+     OUTPUT Innitiate Irrigation
+  ELSE 
+     OUTPUT No Irrigation
+  END IF
+END IF
+
+
+My Understanding:
+check requirements according to croptype and output the appropriate result
+
+
+
+
+
+
+
+
