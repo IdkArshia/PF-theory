@@ -1,0 +1,22 @@
+INPUT money
+INPUT op
+INPUT ap
+INPUT gp
+INPUT tp
+INPUT o
+INPUT a
+INPUT g
+INPUT t
+Bill = (op*o) + (ap*a) +  (gp*g) + (tp*t) 
+IF Bill> money
+THEN 
+  OUTPUT "insuffecient money"
+ELSE 
+  change=money-Bill
+  OUTPUT BILL, change
+END IF
+
+
+My Understanding:
+first take input prices of items, then take input quantities of items that mr bhoola needs. cakculate the bill by multiplying price of each item
+by quantity of that item and add them all. Check if mr bhoola has sufficeint money.if yes then calculate change and output billa nd change. if no then output insufficeint money
