@@ -1,0 +1,29 @@
+INPUT province
+INPUT gender
+INPUT age
+IF province==Punjab
+THEN
+  IF gender==girl
+  THEN
+    IF age<16
+    THEN OUTPUT "marriage not allowed"
+    ELSE OUTPUT "marriage is allowed"
+    END IF
+  ELSE 
+    IF age<18
+    THEN OUTPUT "marriage not allowed"
+    ELSE OUTPUT "marriage is allowed"
+    END IF
+  END IF
+ELSE
+  IF age<18
+    THEN OUTPUT "marriage not allowed"
+    ELSE OUTPUT "marriage is allowed"
+    END IF
+END IF
+
+
+My understanding:
+if provinve is punjab then check for gender. Check age restrictions acc to gender and output the corresponding result. otherwise the province would be sindh
+which has a general age restriction regardless of gender so check only age and output the corresponding result.
+
