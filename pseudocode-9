@@ -1,0 +1,106 @@
+INPUT DOB
+INPUT MOB
+INPUT YOB
+INPUT CD
+INPUT CM
+INPUT CY
+//1st part
+IF MOB%2 == 0
+THEN
+  IF MOB==2
+  THEN 
+    Function LeapYear(YOB) Returns int
+    IF YOB % 400 ==0
+    THEN 
+      LY=1
+    ELSE IF (YOB%100==0) OR (YOB%4==0)
+    THEN 
+      LY=1
+    ELSE
+      LY=0
+    END IF
+    END IF
+    END FUNCTION
+    IF LY==1
+    THEN
+      IF DOB>29
+      THEN
+        OUTPUT "Invalid Date"
+      ELSE
+        valid=True
+      END IF
+    ELSE
+      IF DOB>28
+      THEN
+        OUTPUT "Invalid Date"
+      ELSE
+        valid=True
+      END IF
+    END IF      
+  ELSE 
+    IF DOB>30
+    THEN
+      OUTPUT "Invalid Date"
+    ELSE
+        valid=True
+    END IF
+  END IF
+ELSE 
+  IF DOB>31
+  THEN
+    OUTPUT "Invalid Date"
+  ELSE
+        valid=True
+  END IF
+END IF
+//2ND PART
+IF valid==True
+THEN
+  IF CM<MOB
+  THEN 
+    y=CY-YOB-1
+    m=CM-1
+    OUTPUT y&"years"&m&"months and"&CD&"days old"
+  ELSE IF CM==MOB
+  THEN 
+    IF DOB==CD
+    THEN
+      y=CY-YOB
+      OUTPUT y&"years old"
+    ELSE
+      y=CY-YOB-1
+      m=CM-1
+      OUTPUT y&"years"&m&"months and"&CD&"days old"
+    END IF
+    END IF
+  ELSE
+    y=CY-YOB
+    m=CM-MOB
+    OUTPUT y&"years"&m&"months and"&CD&"days old"
+  END IF
+END IF
+
+
+my understanding:
+(sorry for so many if else)
+the first part is checking to see if the entered date of birth is valid or not. if month is even then it checks with 30 days,if it is 2, as if feb, then it enters leapyear function.
+if the year of birth is a leap year then date of birth is checked with 29 if not a leap year then date of birth is checked with 28. 
+if month of birth is odd then date of birth is checked with 31.if date of birth passes this validation check the variable valid becomes true and it enters second part of the code.
+if current month is less then month of birth that means the birthday has not arrived yet then the *variable y becomes current year-year of birth-1 ( subtracting 1 because the birthday has not arrived yet),
+month becomes m=CM-1 (for ex if month is march(3) but birthday is in april(4) then the person is y years 3 months and d days old), days becomes equal to current date* 
+if current month is equal to month of birth and the date is also equal then the person is exactly y= current year-year of birth years old
+if current month is equal to month of birth but the date is not equal then same procedure as * 
+if current month is greater than month of birth that means the bithday has passed so year becomes y=current year-year of birth, month becomes m=MOB-CM ( for ex if month is june(6) and birthday was in april(4) then person is y years and 2 months and d days old)
+days becomes equal to current date.
+
+
+
+
+
+
+    
+
+
+
+
+       
