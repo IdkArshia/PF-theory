@@ -1,0 +1,26 @@
+3Ljug=0
+5Ljug=0
+//fill 3Ljug full
+3Ljug=3
+//pour 3Ljug into 5Ljug
+5Ljug=3
+3Ljug=0
+//fill 3Ljug full
+3Ljug=3
+//pour 3Ljug into 5Ljug until it is full
+5Ljug=5
+3Ljug=1
+//empty 5ljug
+5Ljug=0
+//pour 3Ljug into 5Ljug
+5Ljug=1
+3Ljug=0
+//fill 3Ljug until full
+3Ljug=3
+//pour 3Ljug into 5Ljug
+5Ljug=4
+
+my understanding:
+fill 3Ljug full, pour 3Ljug into 5Ljug, fill 3Ljug full, pour 3Ljug into 5Ljug until it is full. (Now there is 1L IN 3L jug)
+empty 5ljug pour 3Ljug into 5Ljug (there is 1L in 5L jug). fill 3ljug until full, pour 3Ljug into 5ljug (1L +3L= 4L)
+
