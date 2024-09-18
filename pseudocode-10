@@ -1,0 +1,32 @@
+INPUT Num
+FNum=""
+RNum=""
+DO
+  R=Num%10
+  IF R==9
+  THEN 
+    IF RNum==0
+    THEN
+      RNum=""
+    ELSE
+      RNum=RNum/10
+    END IF
+  END IF
+  RNum=RNum&R
+  Num=Num/10
+WHILE Num>0
+//2nd loop to reverse the string
+DO
+  x=RNum%10
+  FNum=FNum&x
+  RNum=RNum/10
+WHILE RNum>0\
+OUTPUT FNum
+
+My Understanding:
+the first loop gets the last digit of the number by mod 10 and saves it in R.
+if R is not 9 then it is cancatinated with an empty string called RNum.If R is 9, then it removes the last digit, which would be 0,
+from RNum by mod 10 and then cancatinates R with RNum.Number is updated by number/10.This repeats till number becomes 0.
+Now RNum is a reverse string of the orignal number but wuthout zeros. we reverse this string by getting last digit by mod 10 
+and cancatinating it with an empty string. Update RNum by RNum/10.Repeat this until RNum=0. Output FNum 
+
