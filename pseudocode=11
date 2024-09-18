@@ -1,0 +1,32 @@
+INPUT n1, n2
+IF n1>0 AND n2>0
+THEN
+  IF n1==1 OR n2==1
+  THEN
+    OUTPUT "numbers are coprime"
+  ELSE 
+    i=2
+  END IF
+    WHILE i<n1 AND i<n2
+      IF i%n1==0 AND i%n2==0
+      THEN
+        OUTPUT "not coprime numbers"
+        flag=1
+      ELSE
+        i=i+1
+      END IF
+    END WHILE
+ IF flag==1
+ THEN
+   OUTPUT "Numbers are coprime"
+ END IF
+ELSE
+  OUTPUT "enter positive numbers"
+END IF
+
+My Understanding:
+(Any two positive numbers are coprime if their GCD is 1)
+if numbers are non positive integers then output error message.
+otherwise if one of the numbers is one then they are coprime because every number is coprime with 1.
+otherwise check if there is any number other than 1 that devides both the numbers, if no then they are coprime otherwise
+they are not coprime.
