@@ -1,26 +1,28 @@
 INPUT N
-IF N==0110000
-THEN
-  OUTPUT 1
-ELSE IF N==1101101
-THEN
-  OUTPUT 2
-ELSE IF N==1101101
-THEN
-  OUTPUT 2
-ELSE IF N==1101101
-THEN
-  OUTPUT 2
-ELSE IF N==1101101
-THEN
-  OUTPUT 2
-ELSE IF N==1101101
-THEN
-  OUTPUT 2
-ELSE IF N==1101101
-THEN
-  OUTPUT 2
-ELSE IF N==1101101
-THEN
-  OUTPUT 2
+SWITCH(N)
+  CASE(1111110):
+  OUTPUT "0"
+  CASE(0110000):
+  OUTPUT "1"
+  CASE(1101101):
+  OUTPUT "2"
+  CASE(1111001):
+  OUTPUT "3"
+  CASE(0110011):
+  OUTPUT "4"
+  CASE(1011011):
+  OUTPUT "5"
+  CASE(1011111):
+  OUTPUT "6"
+  CASE(1110001):
+  OUTPUT "7"
+  CASE(1111111):
+  OUTPUT "8"
+  CASE(1110011):
+  OUTPUT "9"
+  DEFAULT:
+  OUTPUT "invalid input"
   
+  
+my understanding
+check entered number against required input for all numbers from 0-1. display the appropriate number
