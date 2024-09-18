@@ -1,0 +1,13 @@
+INPUT Num
+Sum=0
+DO
+  R=Num % 10
+  Sum=Sum+R
+  Q=Num/10
+  Num=Q
+WHILE Q>0
+OUTPUT Sum
+
+my understanding:
+initialize sum to 0. get last digit og number by mod 10, save it in the variable R. update sum by sum +R.get rest of the number by num/10 and save it in Q. 
+If Q is zero that means the number is finished and we can output sum.if it is not 0 then num=Q
