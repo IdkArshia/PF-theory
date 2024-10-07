@@ -1,0 +1,30 @@
+INPUT M,N,W // capacity of jugs and required amount
+IF W> M+N
+THEN OUTPUT "required amount cannot be measured"
+END IF
+IF W==M OR W==N 
+THEN OUTPUT "required amount can be measured"
+END IF
+IF M<N
+THEN Temp=M
+M=N
+N=Temp
+END IF
+WHILE r!=0
+r=M%N
+M=N
+N=r
+END WHILE 
+gcd=M
+IF W%gcd==0
+THEN OUTPUT "required amount can be measured"
+ELSE OUTPUT "required amount cannot be measured"
+
+
+MY UNDERSTANDING: 
+required amount of water cannot be measured
+if it is greater than sum of both the jugs.
+It can be measured if it is exactly equal 
+to any one of the jugs.It can be measured if
+gcd of capacities of both the jugs is a 
+divisor of required water amount 
